@@ -1,0 +1,7 @@
+<h1><%= product.Name %></h1>
+<div><%= product._id %></div>
+<div><%= product.Description %></div>
+
+<%if (product.Image != null) { %>
+    <img src="http://localhost:3000/<%= product.Image %>"></img>
+    <% } %>
