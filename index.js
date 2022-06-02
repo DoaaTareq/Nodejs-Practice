@@ -12,9 +12,10 @@ app.use("/api/products", products);
 app.use("/uploads", express.static("uploads"));
 app.set('view engine', 'ejs');
 
+const port = process.env.PORT || 3000;
 
 const dbURI = 'mongodb+srv://doaaTarek:123@cluster0.j46agni.mongodb.net/Node-tutorial?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
-.then((result)=>{console.log("connected"); app.listen(3000, () => console.log("Listening"));}).catch((error)=>{console.log("dsdsds",error);})
+.then((result)=>{console.log("connected"); app.listen(port, () => console.log("Listening"));}).catch((error)=>{console.log("dsdsds",error);})
 
 
